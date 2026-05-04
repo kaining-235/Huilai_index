@@ -1,0 +1,252 @@
+/* ─── CSS Variables ─── */
+    :root {
+      --wine:      #800020;
+      --wine-dark: #5a0016;
+      --champagne: #D4AF37;
+      --charcoal:  #333333;
+      --inkblack:  #1a1a1a;
+      --cream:     #F9F7F4;
+      --bg-dark:   #0f172a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    /* ─── Scrollbar ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--inkblack); }
+    ::-webkit-scrollbar-thumb { background: var(--wine); border-radius: 3px; }
+
+    /* ─── Gold divider line ─── */
+    .gold-line {
+      display: block;
+      width: 60px;
+      height: 1px;
+      background: var(--champagne);
+      margin: 0 auto;
+    }
+    .gold-line-left {
+      display: block;
+      width: 48px;
+      height: 1px;
+      background: var(--champagne);
+    }
+
+    /* ─── Section fade-in ─── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── Header ─── */
+    #header {
+      transition: background 0.4s ease, backdrop-filter 0.4s ease;
+    }
+    #header.scrolled {
+      background: rgba(26, 26, 26, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(212,175,55,0.25);
+    }
+
+    /* ─── Mobile nav toggle ─── */
+    .nav-link {
+      position: relative;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      color: rgba(255,255,255,0.8);
+      transition: color 0.25s;
+      padding-bottom: 2px;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: var(--champagne);
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #fff; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ═══════════════════════════════════════════════
+       Hero Section (Option 3: Abstract Data & Precision)
+    ════════════════════════════════════════════════ */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      background: var(--bg-dark); 
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .hero-content { 
+      position: relative; 
+      z-index: 10; 
+    }
+
+    /* 1. 精準金融網格背景 */
+    .hero-grid-bg {
+      background-image: 
+        linear-gradient(var(--champagne) 1px, transparent 1px), 
+        linear-gradient(90deg, var(--champagne) 1px, transparent 1px);
+      background-size: 60px 60px;
+      background-position: center center;
+    }
+
+    /* 2. 底部深酒紅漸層光暈 */
+    .hero-wine-glow {
+      background: radial-gradient(circle at 50% 110%, var(--wine) 0%, transparent 60%);
+    }
+
+    /* 3. 垂直抽象資料線條 */
+    .hero-data-line {
+      background: linear-gradient(to bottom, transparent, var(--champagne), transparent);
+    }
+
+    /* 4. 滾動提示的漸層金線 */
+    .scroll-line-gradient {
+      background: linear-gradient(to bottom, var(--champagne), transparent);
+    }
+
+    /* ─── Hero heading texture ─── */
+    .hero-title {
+      font-family: 'Noto Serif TC', serif;
+      font-weight: 900;
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+      line-height: 1.15;
+      letter-spacing: 0.06em;
+      color: #fff;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    }
+
+    /* ─── Utilities (Hero 排版輔助) ─── */
+    .text-champagne { color: var(--champagne); }
+    .bg-champagne { background-color: var(--champagne); }
+    .text-white-85 { color: rgba(255, 255, 255, 0.85); }
+    .tracking-slight { letter-spacing: 0.04em; }
+    .tracking-extreme { letter-spacing: 0.2em; }
+
+    /* ═══════════════════════════════════════════════
+       Other Sections
+    ════════════════════════════════════════════════ */
+
+    /* ─── CTA Button ─── */
+    .btn-wine {
+      display: inline-block;
+      background: var(--wine);
+      color: #fff;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.18em;
+      padding: 14px 38px;
+      border: 1px solid transparent;
+      transition: background 0.3s, border-color 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .btn-wine:hover {
+      background: var(--wine-dark);
+      border-color: var(--champagne);
+      box-shadow: 0 0 24px rgba(212,175,55,0.25);
+    }
+
+    .btn-outline-gold {
+      display: inline-block;
+      background: transparent;
+      color: var(--champagne);
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 0.88rem;
+      letter-spacing: 0.18em;
+      padding: 12px 36px;
+      border: 1px solid var(--champagne);
+      transition: background 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    .btn-outline-gold:hover {
+      background: var(--champagne);
+      color: var(--inkblack);
+    }
+
+    /* ─── Service card ─── */
+    .service-card {
+      background: #F9F9F9;
+      border: 1px solid #e8e8e8;
+      border-bottom: 3px solid transparent;
+      transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    }
+    .service-card:hover {
+      border-color: var(--wine);
+      border-bottom-color: var(--wine);
+      box-shadow: 0 12px 40px rgba(128,0,32,0.12);
+      transform: translateY(-4px);
+    }
+
+    /* ─── Edge section ─── */
+    #edge {
+      background: linear-gradient(135deg, var(--inkblack) 0%, #2a0010 60%, var(--inkblack) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    #edge::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .edge-icon {
+      width: 64px; height: 64px;
+      border: 1px solid rgba(212,175,55,0.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem;
+      color: var(--champagne);
+      transition: background 0.3s, border-color 0.3s;
+    }
+    .edge-card:hover .edge-icon {
+      background: rgba(212,175,55,0.12);
+      border-color: var(--champagne);
+    }
+
+    /* ─── Contact section ─── */
+    #contact {
+      background: linear-gradient(160deg, #1a1a1a 0%, #0d0005 100%);
+    }
+    .info-item svg { flex-shrink: 0; }
+
+    /* ─── Map ─── */
+    .map-wrapper iframe {
+      filter: grayscale(100%) invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.1);
+      border-radius: 2px;
+    }
+
+    /* ─── Footer ─── */
+    footer {
+      background: #0d0005;
+      border-top: 1px solid rgba(212,175,55,0.2);
+    }
+
+    /* ─── Blockquote gold quotes ─── */
+    .gold-quote::before { content: '\201C'; color: var(--champagne); font-size: 3rem; line-height: 0; vertical-align: -0.6rem; font-family: Georgia, serif; margin-right: 4px; }
+    .gold-quote::after  { content: '\201D'; color: var(--champagne); font-size: 3rem; line-height: 0; vertical-align: -0.6rem; font-family: Georgia, serif; margin-left: 4px; }
+
+    /* ─── Hamburger ─── */
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: #fff; margin: 5px 0;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    #mobile-menu {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    #mobile-menu.open { max-height: 400px; }

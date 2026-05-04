@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>惠徠稅務記帳士事務所</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine:    { DEFAULT: '#800020', dark: '#5a0016', light: '#9a1a3a' },
+            charcoal:'#333333',
+            inkblack:'#1a1a1a',
+            champagne:'#D4AF37',
+            cream:   '#F9F7F4',
+          },
+          fontFamily: {
+            serif:  ['"Noto Serif TC"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:   ['"Noto Sans TC"', 'sans-serif'],
+            display:['"Cormorant Garamond"', '"Noto Serif TC"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+
+</head>
+<body class="bg-inkblack font-sans text-charcoal antialiased">
+
+<!-- ═══════════════════════════════════════════════
+     HEADER / NAVIGATION
+════════════════════════════════════════════════ -->
+<header id="header" class="fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-20">
+
+    <!-- Logo -->
+    <a href="#hero" class="text-center md:text-left flex flex-col items-center md:items-start group">
+      <p class="font-serif font-bold text-white text-xl tracking-[0.15em] group-hover:text-[var(--champagne)] transition-colors duration-300">惠徠稅務記帳士事務所</p>
+      <div class="flex items-center gap-3 mt-2">
+        <span class="w-8 h-[2px] bg-[var(--wine)] group-hover:w-12 transition-all duration-500"></span>
+        <span class="font-sans font-light text-[var(--champagne)] text-[9px] tracking-[0.3em] uppercase opacity-80">Huilai Tax & Accounting</span>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#about"   class="nav-link">關於團隊</a>
+      <a href="#services" class="nav-link">服務項目</a>
+      <a href="#edge"    class="nav-link">核心優勢</a>
+      <a href="#blog"    class="nav-link">稅務專欄</a>
+      <a href="#contact" class="nav-link">聯絡我們</a>
+      <a href="#contact" class="btn-wine text-xs ml-2">預約諮詢</a>
+    </nav>
+
+    <!-- Hamburger (mobile) -->
+    <button class="hamburger lg:hidden flex flex-col justify-center" id="hamburger" aria-label="開啟選單">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="lg:hidden bg-inkblack/95 border-t border-champagne/20">
+    <nav class="flex flex-col px-8 py-4 gap-4">
+      <a href="#about"    class="nav-link py-2 border-b border-white/5">關於團隊</a>
+      <a href="#services" class="nav-link py-2 border-b border-white/5">服務項目</a>
+      <a href="#edge"     class="nav-link py-2 border-b border-white/5">核心優勢</a>
+      <a href="#blog"     class="nav-link py-2 border-b border-white/5">稅務專欄</a>
+      <a href="#contact"  class="nav-link py-2">聯絡我們</a>
+    </nav>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════
+     HERO SECTION (Option 3: Abstract Data & Precision)
+════════════════════════════════════════════════ -->
+<section id="hero" class="relative flex items-center justify-center min-h-screen bg-[#0f172a] overflow-hidden">
+
+  
+  <div class="absolute inset-0 z-0 opacity-20 mix-blend-luminosity bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center"></div>
+
+  <div class="hero-grid-bg absolute inset-0 z-0 opacity-10"></div>
+
+  <div class="hero-wine-glow absolute inset-0 z-0 opacity-60"></div>
+
+  <div class="hero-data-line absolute top-0 left-[15%] w-[1px] h-full opacity-20"></div>
+  <div class="hero-data-line absolute top-0 right-[15%] w-[1px] h-full opacity-20"></div>
+
+  <div class="hero-content relative z-10 max-w-5xl mx-auto px-8 py-48 text-center">
+    <div class="reveal">
+      <p class="font-sans font-light tracking-[0.35em] text-xs uppercase mb-6" style="color: var(--champagne, #D4AF37);">
+        一站式財稅管家 · Professional Tax &amp; Accounting Services
+      </p>
+      
+      <h1 class="hero-title mb-6 font-serif text-5xl lg:text-7xl text-white font-bold tracking-wider leading-tight">
+        深耕專業<br/>
+        <span style="color: rgba(255,255,255,0.85);">成就卓越財稅</span>
+      </h1>
+      
+      <!-- 將金線置中並確保顯示 -->
+      <span class="gold-line mb-8 mx-auto block w-16 h-[1px]" style="background: var(--champagne, #D4AF37);"></span>
+      
+      <p class="font-sans font-light text-white/70 text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mt-8 mb-12" style="letter-spacing:0.04em;">
+        提供精準帳務與策略性稅務規劃，結合會計師簽證資源，<br class="hidden md:block"/>為您的企業經營保駕護航。
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-5 justify-center mt-4">
+        <a href="#contact" class="btn-wine" style="letter-spacing:0.2em;">預約專業諮詢</a>
+        <a href="#services" class="btn-outline-gold">瞭解服務項目</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       滾動提示層 (Scroll Hint)
+  =========================================== -->
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 opacity-60">
+    <span class="font-sans text-white text-[10px] tracking-[0.3em]">SCROLL</span>
+    <!-- 替換為香檳金的漸層線條 -->
+    <div class="w-[1px] h-12 animate-pulse" style="background: linear-gradient(to bottom, var(--champagne, #D4AF37), transparent);"></div>
+  </div>
+  
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROFESSIONAL PROFILE / ABOUT
+════════════════════════════════════════════════ -->
+<section id="about" class="bg-cream py-28 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+
+    <!-- Image -->
+    <div class="reveal relative">
+      <div class="relative overflow-hidden shadow-2xl" style="aspect-ratio: 4/5; max-height: 560px;">
+        <img
+          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+          alt="惠徠事務所辦公環境"
+          class="w-full h-full object-cover grayscale"
+          style="filter: grayscale(30%) brightness(0.92);"
+        />
+        <!-- Wine overlay strip -->
+        <div class="absolute bottom-0 left-0 right-0 h-2" style="background: var(--wine);"></div>
+      </div>
+      <!-- Decorative frame -->
+      <div class="absolute -bottom-5 -right-5 w-40 h-40 border border-champagne/30 -z-0 hidden lg:block"></div>
+      <div class="absolute -top-5 -left-5 w-24 h-24 border border-wine/30 -z-0 hidden lg:block"></div>
+    </div>
+
+    <!-- Text -->
+    <div class="reveal">
+      <p class="font-sans font-light tracking-[0.3em] uppercase text-xs mb-4" style="color: var(--champagne);">About Us</p>
+      <h2 class="font-serif font-bold text-4xl lg:text-5xl text-inkblack mb-2 leading-tight">關於惠徠</h2>
+      <span class="gold-line-left mb-8"></span>
+
+      <p class="font-sans text-charcoal/80 text-base leading-loose mb-6 mt-6" style="font-weight:300;">
+        惠徠稅務記帳士事務所秉持「誠信、專業、高效率」的核心理念，深耕財稅領域，以精確的帳務管理與前瞻性的稅務規劃，協助企業主與創業者掌握財務健康。
+      </p>
+      <p class="font-sans text-charcoal/80 text-base leading-loose mb-8" style="font-weight:300;">
+        我們更引以為傲的是<strong class="font-semibold" style="color:var(--wine);">跨領域專業結盟</strong>的服務模式——與特約會計師團隊深度合作，提供財務報表簽證、稅務簽證及複雜資本交易諮詢，讓客戶在單一窗口獲得完整的財稅解決方案。
+      </p>
+
+      <!-- Quote -->
+      <blockquote class="relative pl-6 border-l-2 my-8" style="border-color: var(--wine);">
+        <p class="font-serif italic text-lg text-inkblack leading-relaxed gold-quote">
+          數字的背後是責任，專業的價值在於信賴。
+        </p>
+        <cite class="block font-sans text-xs tracking-widest mt-3" style="color: var(--champagne); font-style:normal;">— 惠徠事務所</cite>
+      </blockquote>
+
+      <!-- Stats row -->
+      <div class="grid grid-cols-3 gap-4 mt-10 pt-8 border-t border-charcoal/10">
+        <div>
+          <p class="font-serif font-bold text-3xl" style="color:var(--wine);">10+</p>
+          <p class="font-sans text-xs text-charcoal/60 mt-1 tracking-wide">年以上經驗</p>
+        </div>
+        <div class="border-l border-charcoal/10 pl-4">
+          <p class="font-serif font-bold text-3xl" style="color:var(--wine);">500+</p>
+          <p class="font-sans text-xs text-charcoal/60 mt-1 tracking-wide">合作客戶</p>
+        </div>
+        <div class="border-l border-charcoal/10 pl-4">
+          <p class="font-serif font-bold text-3xl" style="color:var(--wine);">100%</p>
+          <p class="font-sans text-xs text-charcoal/60 mt-1 tracking-wide">申報準時率</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     SERVICES — 6-GRID
+════════════════════════════════════════════════ -->
+<section id="services" class="bg-white py-28 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Section header -->
+    <div class="text-center reveal mb-16">
+      <p class="font-sans font-light tracking-[0.3em] uppercase text-xs mb-4" style="color: var(--champagne);">Our Services</p>
+      <h2 class="font-serif font-bold text-4xl lg:text-5xl text-inkblack mb-4">服務項目</h2>
+      <span class="gold-line"></span>
+      <p class="font-sans text-charcoal/60 text-sm mt-6 max-w-md mx-auto leading-relaxed">全方位財稅支援，從登記設立到策略簽證，一站到位。</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+      <!-- Card 1 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">🏢</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">01</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">工商登記</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">公司設立、變更登記、分公司申請、特許行業申請，全程代辦，省時省力。</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">📊</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">02</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">帳務處理</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">傳票切立、財務報表產出、雲端帳務系統導入，確保帳目清晰透明。</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">🔍</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">03</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">稅務規劃</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">合法節稅方案設計、各類稅務申報（營業稅、所得稅、贈與稅），降低稅務風險。</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">📝</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">04</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">財稅簽證</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">財務報表及稅務簽證，由特約會計師出具，具法律效力，符合金融往來與政府標案需求。</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">👥</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">05</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">勞健保薪資</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">投保單位設立、勞健保加退保、薪資計算與扣繳申報，符合最新法規要求。</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="service-card p-8 group cursor-default">
+        <div class="text-3xl mb-5">💡</div>
+        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">06</p>
+        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">企業顧問</h3>
+        <span class="gold-line-left mb-4"></span>
+        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">內部控制制度建立、股權架構規劃諮詢、企業傳承與接班方案，深度財務顧問服務。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     COMPETITIVE EDGE
+════════════════════════════════════════════════ -->
+<section id="edge" class="py-28 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto relative z-10">
+
+    <!-- Header -->
+    <div class="text-center reveal mb-20">
+      <p class="font-sans font-light tracking-[0.3em] uppercase text-xs mb-4" style="color: var(--champagne);">Why Choose Us</p>
+      <h2 class="font-serif font-bold text-4xl lg:text-5xl text-white mb-4">核心優勢</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <!-- 3 columns -->
+    <div class="grid md:grid-cols-3 gap-10 reveal">
+
+      <!-- Precision -->
+      <div class="edge-card text-center group px-6 py-10 border border-white/5 hover:border-champagne/20 transition-colors duration-500">
+        <div class="edge-icon mx-auto mb-6">⚖️</div>
+        <h3 class="font-serif font-bold text-2xl text-white mb-2">精準</h3>
+        <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Precision</p>
+        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <p class="font-sans text-white/60 text-sm leading-relaxed">嚴謹的帳務覆核機制，透過雙重核對程序確保每一筆數字的精確性，將人為誤差降至最低。</p>
+      </div>
+
+      <!-- Efficiency -->
+      <div class="edge-card text-center group px-6 py-10 border border-white/5 hover:border-champagne/20 transition-colors duration-500" style="border-top: 3px solid var(--wine);">
+        <div class="edge-icon mx-auto mb-6">⚡</div>
+        <h3 class="font-serif font-bold text-2xl text-white mb-2">即時</h3>
+        <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Efficiency</p>
+        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <p class="font-sans text-white/60 text-sm leading-relaxed">快速回應客戶稅務疑義，24小時內提供初步意見，緊急情況優先處理，保障您的商機不流失。</p>
+      </div>
+
+      <!-- Integration  -->
+      <div class="edge-card text-center group px-6 py-10 border border-white/5 hover:border-champagne/20 transition-colors duration-500">
+        <div class="edge-icon mx-auto mb-6">🤝</div>
+        <h3 class="font-serif font-bold text-2xl text-white mb-2">整合</h3>
+        <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Integration</p>
+        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <p class="font-sans text-white/60 text-sm leading-relaxed">串聯記帳士與特約會計師簽證資源，打造單一窗口的一站式服務，免除企業多方對接的繁瑣與成本。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+    BLOG / RESOURCES (常綠精選專欄版)
+════════════════════════════════════════════════ -->
+<section id="blog" class="bg-cream py-24 px-6 lg:px-12">
+  <div class="max-w-5xl mx-auto text-center reveal">
+
+    <!-- Gold divider top -->
+    <div class="w-full h-px mb-16" style="background: linear-gradient(to right, transparent, var(--champagne), transparent);"></div>
+
+    <p class="font-sans font-light tracking-[0.3em] uppercase text-xs mb-4" style="color: var(--champagne);">Tax Resources</p>
+    <h2 class="font-serif font-bold text-4xl lg:text-5xl text-inkblack mb-6">掌握最新財稅法規<br/>與市場資訊</h2>
+    <span class="gold-line mb-8 inline-block"></span>
+    <p class="font-sans text-charcoal/60 text-base leading-relaxed mt-4 mb-14 max-w-xl mx-auto">
+      稅法法規持續更新，財務策略瞬息萬變。我們定期整理重點稅務公告與實用財務知識，幫助您超前布局、從容應對。
+    </p>
+
+    <!-- 新增：動態稅務新聞的容器 (Grid 佈局) -->
+    <div id="tax-news-container" class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 text-left mb-14">
+       <!-- 這裡的內容將由下方的 JavaScript 瞬間自動填入 -->
+    </div>
+
+    <!-- 原本的按鈕，作為查看全部的引導 -->
+    <div class="mt-4">
+      <a
+        href="https://www.ntbk.gov.tw/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-wine inline-flex items-center gap-3 text-sm transition-transform hover:-translate-y-1"
+        style="letter-spacing:0.15em;"
+      >
+        查看更多官方公告
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT / MAP
+════════════════════════════════════════════════ -->
+<section id="contact" class="py-28 px-6 lg:px-12">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center reveal mb-16">
+      <p class="font-sans font-light tracking-[0.3em] uppercase text-xs mb-4" style="color: var(--champagne);">Contact Us</p>
+      <h2 class="font-serif font-bold text-4xl lg:text-5xl text-white mb-4">聯絡我們</h2>
+      <span class="gold-line"></span>
+    </div>
+
+    <!-- Two columns -->
+    <div class="grid lg:grid-cols-2 gap-12 reveal">
+
+      <!-- Left: Info -->
+      <div class="flex flex-col gap-8">
+
+<!-- Address -->
+        <div class="info-item flex items-start gap-5 group">
+          <div class="flex-shrink-0 w-12 h-12 border border-[var(--champagne)]/30 flex items-center justify-center text-[var(--champagne)] transition-all duration-300 group-hover:border-[var(--champagne)] group-hover:bg-[var(--wine)]/20 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          </div>
+          <div class="pt-1">
+            <p class="font-sans text-[11px] tracking-[0.2em] mb-2 uppercase" style="color:var(--champagne);">Address</p>
+            <p class="font-sans text-white/85 text-sm tracking-widest leading-relaxed">高雄市苓雅區廣州一街58號</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="info-item flex items-start gap-5 group">
+          <div class="flex-shrink-0 w-12 h-12 border border-[var(--champagne)]/30 flex items-center justify-center text-[var(--champagne)] transition-all duration-300 group-hover:border-[var(--champagne)] group-hover:bg-[var(--wine)]/20 shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+          </svg>
+          </div>
+          <div class="pt-1">
+            <p class="font-sans text-[11px] tracking-[0.2em] mb-2 uppercase" style="color:var(--champagne);">Phone</p>
+            <a href="tel:+88677268978" class="block font-sans text-white/85 text-sm tracking-widest hover:text-[var(--champagne)] transition-colors duration-300">(07) 726-8978</a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="info-item flex items-start gap-5 group">
+          <div class="flex-shrink-0 w-12 h-12 border border-[var(--champagne)]/30 flex items-center justify-center text-[var(--champagne)] transition-all duration-300 group-hover:border-[var(--champagne)] group-hover:bg-[var(--wine)]/20 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </div>
+          <div class="pt-1">
+            <p class="font-sans text-[11px] tracking-[0.2em] mb-2 uppercase" style="color:var(--champagne);">Email</p>
+            <a href="mailto:info@huilai-tax.com.tw" class="block font-sans text-white/85 text-sm tracking-widest hover:text-[var(--champagne)] transition-colors duration-300">info@huilai-tax.com.tw</a>
+          </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="info-item flex items-start gap-5 group">
+          <div class="flex-shrink-0 w-12 h-12 border border-[var(--champagne)]/30 flex items-center justify-center text-[var(--champagne)] transition-all duration-300 group-hover:border-[var(--champagne)] group-hover:bg-[var(--wine)]/20 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div class="pt-1">
+            <p class="font-sans text-[11px] tracking-[0.2em] mb-3 uppercase" style="color:var(--champagne);">Operating Hours</p>
+            <div class="font-sans text-white/85 text-sm tracking-widest leading-relaxed mb-4">
+              <p class="flex items-center gap-3 mb-1">
+                <span class="text-white/50 text-xs">週一至五</span>
+                <span>09:00 – 12:00</span>
+              </p>
+              <p class="flex items-center gap-3">
+                <span class="text-transparent text-xs">週一至五</span>
+                <span>13:30 – 18:00</span>
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-block px-2 py-1 bg-white/5 border border-white/10 text-white/50 text-[10px] tracking-[0.15em] rounded-sm">週休六日</span>
+              <span class="inline-block px-2 py-1 bg-[var(--wine)]/20 border border-[var(--wine)]/40 text-[var(--champagne)] text-[10px] tracking-[0.15em] rounded-sm shadow-sm">國定假日公休</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- LINE Button -->
+        <div class="mt-4">
+          <a
+            href="https://line.me/R/ti/p/@huilai"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-3 px-8 py-4 text-sm font-sans tracking-widest transition-all duration-300"
+            style="background:#06C755; color:#fff; letter-spacing:0.15em;"
+            onmouseover="this.style.background='#04a847'"
+            onmouseout="this.style.background='#06C755'"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+            </svg>
+            加入 LINE 官方帳號諮詢
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right: Map -->
+      <div class="map-wrapper reveal">
+        <div class="w-full h-80 lg:h-full min-h-64 overflow-hidden border border-white/10">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457.6054098860048!2d120.31837505295506!3d22.620884668180878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0498597c1d35%3A0xf0f61c728980a3cf!2z5oOg5b6g6KiY5biz5aOr5Y-K5aCx56iF5Luj55CG5qWt5YuZ5Lq65LqL5YuZ5omA!5e0!3m2!1szh-TW!2stw!4v1777838062526!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 320px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="惠徠稅務記帳士事務所位置"
+          ></iframe>
+        </div>
+        <p class="font-sans text-white/30 text-xs mt-3 tracking-wide"></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="py-12 px-6 lg:px-12 relative overflow-hidden">
+
+  <div class="absolute top-0 left-0 w-full h-[1px]" style="background: linear-gradient(90deg, transparent, rgba(212,175,55,0.2), transparent);"></div>
+
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-6">
+
+ 
+    <div class="text-center md:text-left flex flex-col items-center md:items-start group cursor-pointer" onclick="window.scrollTo(0,0)">
+      <p class="font-serif font-bold text-white text-lg tracking-[0.15em] transition-colors duration-300">惠徠稅務記帳士事務所</p>
+      <div class="flex items-center gap-3 mt-2">
+        <span class="w-8 h-[2px] bg-[var(--wine)] transition-all duration-500"></span>
+        <span class="font-sans font-light text-[var(--champagne)] text-[9px] tracking-[0.3em] uppercase opacity-80">Huilai Tax & Accounting</span>
+      </div>
+    </div>
+
+
+    <p class="font-sans text-white/30 text-[10px] tracking-[0.2em] uppercase text-center md:mt-2">
+      © 2026 Huilai Tax & Accounting. <br class="block md:hidden" />All Rights Reserved.
+    </p>
+
+    <div class="flex gap-8 md:mt-2">
+      <a href="#about" class="group flex flex-col items-center md:items-end">
+        <span class="font-serif text-white/60 text-xs tracking-[0.2em] group-hover:text-white transition-colors duration-300">關於</span>
+        <span class="font-sans text-[var(--champagne)] text-[8px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-80 transition-all duration-300 -translate-y-1 group-hover:translate-y-0 mt-1">About</span>
+      </a>
+      
+      <a href="#services" class="group flex flex-col items-center md:items-end">
+        <span class="font-serif text-white/60 text-xs tracking-[0.2em] group-hover:text-white transition-colors duration-300">服務</span>
+        <span class="font-sans text-[var(--champagne)] text-[8px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-80 transition-all duration-300 -translate-y-1 group-hover:translate-y-0 mt-1">Services</span>
+      </a>
+      
+      <a href="#contact" class="group flex flex-col items-center md:items-end">
+        <span class="font-serif text-white/60 text-xs tracking-[0.2em] group-hover:text-white transition-colors duration-300">聯絡</span>
+        <span class="font-sans text-[var(--champagne)] text-[8px] tracking-[0.2em] uppercase opacity-0 group-hover:opacity-80 transition-all duration-300 -translate-y-1 group-hover:translate-y-0 mt-1">Contact</span>
+      </a>
+    </div>
+    
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════ -->
+<script>
+  /* ── Header scroll effect ── */
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+
+  /* ── Hamburger toggle ── */
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+  });
+  // Close on link click
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    });
+  });
+
+  /* ── Intersection Observer for reveal ── */
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  reveals.forEach(el => observer.observe(el));
+
+  /* ── Stagger child reveals inside grids ── */
+  document.querySelectorAll('.grid .reveal, .grid > div').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 3) * 0.12}s`;
+  });
+
+
+    // 常綠文章 JavaScript (純靜態，極速載入，永不過期)
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('tax-news-container');
+
+    // 取得今天的日期作為基準，用來動態生成「永遠看起來很新」的發布日期
+    const today = new Date();
+    
+    // 輔助函數：計算幾天前的日期，並格式化為 YYYY-MM-DD
+    function getRecentDate(daysAgo) {
+        const date = new Date(today);
+        date.setDate(date.getDate() - daysAgo);
+        const yyyy = date.getFullYear();
+        const mm = String(date.getMonth() + 1).padStart(2, '0');
+        const dd = String(date.getDate()).padStart(2, '0');
+        return `${yyyy}-${mm}-${dd}`;
+    }
+
+    // 精選常綠文章庫 (這些主題對中小企業永遠實用)
+    const evergreenNews = [
+        {
+            // 自動設定為 5 天前發布
+            pubDate: getRecentDate(5), 
+            title: "中小企業節稅指南：營利事業所得稅常見申報盲點解析",
+            description: "營所稅申報魔鬼藏在細節裡。本所彙整歷年查帳常見缺失，包含交際費超限、擴大書審純益率適用標準，以及研發投資抵減的必備證明文件，協助企業合法合規降低稅務風險。",
+            link: "https://www.ntbk.gov.tw/" 
+        },
+        {
+            // 自動設定為 18 天前發布
+            pubDate: getRecentDate(18),
+            title: "企業數位轉型首部曲：導入雲端電子發票與帳務系統",
+            description: "為因應財政部無紙化政策，全面導入雲端電子發票已成趨勢。透過系統化帳務處理，不僅能大幅降低人工切傳票的錯誤率，更能讓經營者透過手機即時掌握公司金流與財務報表。",
+            link: "https://www.ntbk.gov.tw/"
+        },
+        {
+            // 自動設定為 42 天前發布
+            pubDate: getRecentDate(42),
+            title: "新創必讀：公司設立登記與特許行業申請流程全攻略",
+            description: "萬事起頭難，從公司命名查名、資本額簽證到營業登記，每一步都攸關未來的稅務基礎。本文解析「行號」與「有限公司」在稅法上的根本差異，協助創業者選擇最有利的組織型態。",
+            link: "https://www.ntbk.gov.tw/"
+        }
+    ];
+
+    // 將常綠文章繪製成高質感卡片 (直接渲染，無需等待)
+    evergreenNews.forEach(item => {
+        const card = `
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="group block bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-500 border-t-[3px] border-transparent hover:border-[#800020] relative">
+                <!-- 發布日期 (自動生成的最新日期) -->
+                <div class="font-sans text-xs tracking-widest mb-4 font-bold" style="color: var(--champagne);">
+                    ${item.pubDate}
+                </div>
+                
+                <!-- 新聞標題 -->
+                <h3 class="font-serif font-bold text-lg text-inkblack mb-4 group-hover:text-[#800020] transition-colors duration-300 line-clamp-2 leading-snug">
+                    ${item.title}
+                </h3>
+                
+                <!-- 新聞內文摘錄 -->
+                <div class="font-sans text-charcoal/60 text-sm leading-relaxed line-clamp-3 mb-6">
+                    ${item.description}
+                </div>
+                
+                <!-- 閱讀全文引導 -->
+                <div class="font-sans text-xs uppercase tracking-widest flex items-center gap-2 transition-colors duration-300 group-hover:text-[#800020]" style="color: var(--champagne);">
+                    閱讀全文 <span class="group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                </div>
+            </a>
+        `;
+        container.innerHTML += card;
+    });
+});
+
+</script>
+
+</body>
+</html>
