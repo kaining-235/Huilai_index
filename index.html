@@ -8,8 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="./style.css">
+
+<!-- 現代幾何奢華風：極簡香檳金菱形 -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L90 50 L50 90 L10 50 Z' stroke='%23DFBE6A' stroke-width='8' fill='none' stroke-linejoin='round'/%3E%3Cpath d='M50 30 L70 50 L50 70 L30 50 Z' fill='%23DFBE6A'/%3E%3C/svg%3E">
+
+<!-- Open Graph Tags -->
+  <meta property="og:title" content="惠徠稅務記帳士事務所 | 高雄專業財稅顧問" />
+  <meta property="og:description" content="全方位財稅支援，提供工商設立、帳務處理、稅務規劃及特約會計師簽證，為您打造穩健的企業財務基礎。" />
+  <meta property="og:url" content="https://你的網址.com.tw" /> 
+  <meta property="og:type" content="website" />
 
   <script>
     tailwind.config = {
@@ -191,12 +199,11 @@
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════
-     SERVICES — 6-GRID
+     SERVICES
 ════════════════════════════════════════════════ -->
-<section id="services" class="bg-white py-28 px-6 lg:px-12 min-h-screen flex flex-col justify-center">
-  <div class="max-w-7xl mx-auto">
+<section id="services" class="bg-white py-28 px-6 lg:px-12 min-h-screen flex flex-col justify-center relative">
+  <div class="max-w-7xl mx-auto w-full relative z-10">
 
     <!-- Section header -->
     <div class="text-center reveal mb-16">
@@ -206,72 +213,88 @@
       <p class="font-sans text-charcoal/60 text-sm mt-6 max-w-md mx-auto leading-relaxed">全方位財稅支援，從登記設立到策略簽證，一站到位。</p>
     </div>
 
-    <!-- Cards Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 reveal">
 
       <!-- Card 1 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">🏢</div>
+      <div class="service-card p-8 group cursor-default md:col-span-1 lg:col-span-2">
+        <!-- SVG 圖示 (Hover 時微放大) -->
+        <div class="w-10 h-10 mb-6 text-black group-hover:scale-110 transition-transform duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
+          </svg>
+        </div>
         <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">01</p>
         <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">工商登記</h3>
         <span class="gold-line-left mb-4"></span>
         <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">公司設立、變更登記、分公司申請、特許行業申請，全程代辦，省時省力。</p>
+        <!-- Hover -->
+        <span class="block mt-6 font-sans text-[var(--champagne)] text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">Registration</span>
       </div>
 
-      <!-- Card 2 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">📊</div>
+      <!-- Card -->
+      <div class="service-card p-8 group cursor-default md:col-span-1 lg:col-span-2">
+        <div class="w-10 h-10 mb-6 text-black group-hover:scale-110 transition-transform duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25zM6.75 12h.008v.008H6.75V12zm0 3h.008v.008H6.75V15zm0 3h.008v.008H6.75V18z" />
+          </svg>
+        </div>
         <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">02</p>
         <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">帳務處理</h3>
         <span class="gold-line-left mb-4"></span>
         <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">傳票切立、財務報表產出、雲端帳務系統導入，確保帳目清晰透明。</p>
+        <span class="block mt-6 font-sans text-[var(--champagne)] text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">Accounting</span>
       </div>
 
       <!-- Card 3 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">🔍</div>
+      <div class="service-card p-8 group cursor-default md:col-span-1 lg:col-span-2">
+        <div class="w-10 h-10 mb-6 text-black group-hover:scale-110 transition-transform duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m3.75 9v6m3-3H9m1.5-12H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+          </svg>
+        </div>
         <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">03</p>
         <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">稅務規劃</h3>
         <span class="gold-line-left mb-4"></span>
         <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">合法節稅方案設計、各類稅務申報（營業稅、所得稅、贈與稅），降低稅務風險。</p>
+        <span class="block mt-6 font-sans text-[var(--champagne)] text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">Tax Planning</span>
       </div>
 
       <!-- Card 4 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">📝</div>
+      <div class="service-card p-8 group cursor-default md:col-span-1 lg:col-span-2 lg:col-start-2">
+        <div class="w-10 h-10 mb-6 text-black group-hover:scale-110 transition-transform duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 019 9v.375M10.125 2.25A3.375 3.375 0 0113.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 013.375 3.375M9 15l2.25 2.25L15 12" />
+          </svg>
+        </div>
         <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">04</p>
         <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">財稅簽證</h3>
         <span class="gold-line-left mb-4"></span>
         <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">財務報表及稅務簽證，由特約會計師出具，具法律效力，符合金融往來與政府標案需求。</p>
+        <span class="block mt-6 font-sans text-[var(--champagne)] text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">Auditing</span>
       </div>
 
       <!-- Card 5 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">👥</div>
+      <div class="service-card p-8 group cursor-default md:col-span-1 lg:col-span-2">
+        <div class="w-10 h-10 mb-6 text-black group-hover:scale-110 transition-transform duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+          </svg>
+        </div>
         <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">05</p>
-        <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">勞健保薪資</h3>
-        <span class="gold-line-left mb-4"></span>
-        <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">投保單位設立、勞健保加退保、薪資計算與扣繳申報，符合最新法規要求。</p>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="service-card p-8 group cursor-default">
-        <div class="text-3xl mb-5">💡</div>
-        <p class="font-sans text-xs tracking-widest mb-2" style="color:var(--champagne);">06</p>
         <h3 class="font-serif font-bold text-xl text-inkblack mb-3 group-hover:text-wine transition-colors duration-300">企業顧問</h3>
         <span class="gold-line-left mb-4"></span>
         <p class="font-sans text-charcoal/70 text-sm leading-relaxed mt-4">內部控制制度建立、股權架構規劃諮詢、企業傳承與接班方案，深度財務顧問服務。</p>
+        <span class="block mt-6 font-sans text-[var(--champagne)] text-[10px] tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0">Consulting</span>
       </div>
 
     </div>
   </div>
 </section>
 
-
 <!-- ═══════════════════════════════════════════════
-     COMPETITIVE EDGE
+     COMPETITIVE EDGE (核心優勢)
 ════════════════════════════════════════════════ -->
-<section id="edge" class="py-28 px-6 lg:px-12">
+<section id="edge" class="py-28 px-6 lg:px-12 min-h-screen flex flex-col justify-center relative">
   <div class="max-w-7xl mx-auto relative z-10">
 
     <!-- Header -->
@@ -284,37 +307,52 @@
     <!-- 3 columns -->
     <div class="grid md:grid-cols-3 gap-10 reveal">
 
-      <!-- Precision -->
-      <div class="edge-card text-center group px-10 py-16 border border-white/5 hover:border-champagne/20 transition-colors duration-500">
-        <div class="edge-icon mx-auto mb-6">⚖️</div>
+      <!-- Precision (精準) -->
+      <div class="edge-card text-center group px-10 py-16 bg-white/5 backdrop-blur-sm border border-white/10 border-t-[3px] border-t-transparent hover:border-t-[var(--wine)] hover:bg-white/10 transition-all duration-500">
+        <!-- SVG 替換 ⚖️ (認證/品質標章) -->
+        <div class="mx-auto mb-6 w-12 h-12 text-[var(--champagne)] group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(223,190,106,0.6)] transition-all duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+          </svg>
+        </div>
         <h3 class="font-serif font-bold text-2xl text-white mb-2">精準</h3>
         <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Precision</p>
-        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <!-- Hover 時會變長的裝飾線 (w-8 變 w-16) -->
+        <div class="w-8 group-hover:w-16 h-px mx-auto mb-5 transition-all duration-500" style="background:var(--champagne);"></div>
         <p class="font-sans text-white/60 text-sm leading-relaxed">嚴謹的帳務覆核機制，透過雙重核對程序確保每一筆數字的精確性，將人為誤差降至最低。</p>
       </div>
 
-      <!-- Efficiency -->
-      <div class="edge-card text-center group px-10 py-16 border border-white/5 hover:border-champagne/20 transition-colors duration-500" style="border-top: 3px solid var(--wine);">
-        <div class="edge-icon mx-auto mb-6">⚡</div>
+      <!-- Efficiency (即時) -->
+      <div class="edge-card text-center group px-10 py-16 bg-white/5 backdrop-blur-sm border border-white/10 border-t-[3px] border-t-transparent hover:border-t-[var(--wine)] hover:bg-white/10 transition-all duration-500">
+        <!-- SVG 替換 ⚡ (閃電/高效) -->
+        <div class="mx-auto mb-6 w-12 h-12 text-[var(--champagne)] group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(223,190,106,0.6)] transition-all duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
+          </svg>
+        </div>
         <h3 class="font-serif font-bold text-2xl text-white mb-2">即時</h3>
         <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Efficiency</p>
-        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <div class="w-8 group-hover:w-16 h-px mx-auto mb-5 transition-all duration-500" style="background:var(--champagne);"></div>
         <p class="font-sans text-white/60 text-sm leading-relaxed">快速回應客戶稅務疑義，24小時內提供初步意見，緊急情況優先處理，保障您的商機不流失。</p>
       </div>
 
-      <!-- Integration  -->
-      <div class="edge-card text-center group px-10 py-16 border border-white/5 hover:border-champagne/20 transition-colors duration-500">
-        <div class="edge-icon mx-auto mb-6">🤝</div>
+      <!-- Integration (整合) -->
+      <div class="edge-card text-center group px-10 py-16 bg-white/5 backdrop-blur-sm border border-white/10 border-t-[3px] border-t-transparent hover:border-t-[var(--wine)] hover:bg-white/10 transition-all duration-500">
+        <!-- SVG 替換 🤝 (鏈接/整合) -->
+        <div class="mx-auto mb-6 w-12 h-12 text-[var(--champagne)] group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(223,190,106,0.6)] transition-all duration-500">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+          </svg>
+        </div>
         <h3 class="font-serif font-bold text-2xl text-white mb-2">整合</h3>
         <p class="font-sans text-xs tracking-widest mb-5" style="color:var(--champagne);">Integration</p>
-        <div class="w-8 h-px mx-auto mb-5" style="background:var(--champagne);"></div>
+        <div class="w-8 group-hover:w-16 h-px mx-auto mb-5 transition-all duration-500" style="background:var(--champagne);"></div>
         <p class="font-sans text-white/60 text-sm leading-relaxed">串聯記帳士與特約會計師簽證資源，打造單一窗口的一站式服務，免除企業多方對接的繁瑣與成本。</p>
       </div>
 
     </div>
   </div>
 </section>
-
 
 <!-- ═══════════════════════════════════════════════
     BLOG / RESOURCES (常綠精選專欄版)
@@ -411,7 +449,7 @@
           </div>
           <div class="pt-1">
             <p class="font-sans text-[11px] tracking-[0.2em] mb-2 uppercase" style="color:var(--champagne);">Email</p>
-            <a href="mailto:info@huilai-tax.com.tw" class="block font-sans text-white/85 text-sm tracking-widest hover:text-[var(--champagne)] transition-colors duration-300">info@huilai-tax.com.tw</a>
+            <a href="mailto:huilai.tax@gmail.com" class="block font-sans text-white/85 text-sm tracking-widest hover:text-[var(--champagne)] transition-colors duration-300">huilai.tax@gmail.com</a>
           </div>
         </div>
 
@@ -500,9 +538,8 @@
       </div>
     </div>
 
-
     <p class="font-sans text-white/30 text-[10px] tracking-[0.2em] uppercase text-center md:mt-2">
-      © 2026 Huilai Tax & Accounting. <br class="block md:hidden" />All Rights Reserved.
+      © <span id="current-year"></span> Huilai Tax & Accounting. <br class="block md:hidden" />All Rights Reserved.
     </p>
 
     <div class="flex gap-8 md:mt-2">
@@ -646,6 +683,9 @@
         container.innerHTML += card;
     });
 });
+
+//自動更新版權年份 
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 
 </script>
 
