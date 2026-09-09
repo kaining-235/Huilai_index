@@ -103,54 +103,127 @@ function gtag_report_conversion(url) {
   </div>
 </header>
 
-
 <!-- ═══════════════════════════════════════════════
-     HERO SECTION (Option 3: Abstract Data & Precision)
+     HERO SECTION
 ════════════════════════════════════════════════ -->
-<section id="hero" class="relative flex items-center justify-center min-h-screen bg-[#0f172a] overflow-hidden">
+<section id="hero" class="relative flex items-center justify-center min-h-screen bg-[#0f172a] overflow-hidden pt-20">
 
-  
-  <div class="absolute inset-0 z-0 opacity-20 mix-blend-luminosity bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center"></div>
-
+  <!-- 背景 1：網格與深色質感底圖 -->
+  <div class="absolute inset-0 z-0 opacity-15 mix-blend-luminosity bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1800&q=80')] bg-cover bg-center"></div>
   <div class="hero-grid-bg absolute inset-0 z-0 opacity-10"></div>
 
-  <div class="hero-wine-glow absolute inset-0 z-0 opacity-60"></div>
+  <!-- 特效：動態金色/酒紅光暈 (Glow Effect) -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-gradient-to-br from-[var(--wine)]/20 via-[var(--champagne)]/10 to-transparent blur-[120px] pointer-events-none animate-pulse"></div>
 
-  <div class="hero-data-line absolute top-0 left-[15%] w-[1px] h-full opacity-20"></div>
-  <div class="hero-data-line absolute top-0 right-[15%] w-[1px] h-full opacity-20"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 py-20 w-full grid lg:grid-cols-12 gap-12 items-center">
 
-  <div class="hero-content relative z-10 max-w-5xl mx-auto px-8 py-48 text-center">
-    <div class="reveal">
-      <p class="font-sans font-light tracking-[0.35em] text-xs uppercase mb-6" style="color: var(--champagne, #D4AF37);">
-        一站式財稅管家 · Professional Tax &amp; Accounting Services
-      </p>
+    <!-- 左側：中文精準文案與 CTA 按鈕 (佔 7 欄) -->
+    <div class="lg:col-span-7 text-center lg:text-left reveal">
       
-      <h1 class="hero-title mb-6 font-serif text-5xl lg:text-7xl text-white font-bold tracking-wider leading-tight">
-        深耕專業<br/>
-        <span style="color: rgba(255,255,255,0.85);">成就卓越財稅</span>
+      <!-- 小標題 -->
+      <div class="inline-flex items-center gap-3 px-3 py-1.5 rounded-full bg-white/5 border border-[var(--champagne)]/30 mb-6 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-[var(--champagne)] animate-ping"></span>
+        <span class="font-sans font-light tracking-[0.25em] text-[11px] uppercase text-[var(--champagne)]">
+          國家考試合格 · 專業團隊誠信嚴謹
+        </span>
+      </div>
+      
+      <!-- 主標題 (高強度的商業價值主張) -->
+      <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-white tracking-wider leading-[1.25] mb-6">
+        讓每一筆財務數據<br/>
+        <span class="bg-gradient-to-r from-white via-[#f3e5ab] to-[var(--champagne)] bg-clip-text text-transparent">
+          都成為企業成長的底氣
+        </span>
       </h1>
       
-      <!-- 將金線置中並確保顯示 -->
-      <span class="gold-line mb-8 mx-auto block w-16 h-[1px]" style="background: var(--champagne, #D4AF37);"></span>
-      
-      <p class="font-sans font-light text-white/70 text-base lg:text-lg leading-relaxed max-w-2xl mx-auto mt-8 mb-12" style="letter-spacing:0.04em;">
-        提供精準帳務與策略性稅務規劃，結合會計師簽證資源，<br class="hidden md:block"/>為您的企業經營保駕護航。
+      <!-- 副標題 -->
+      <p class="font-sans font-light text-white/75 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0 mb-10" style="letter-spacing:0.04em;">
+        專為創業者與中小企業提供精準帳務整理與策略性稅務規劃。<br class="hidden sm:block"/>
+        結合特約會計師簽證資源，打造安全、合規、高效率的一站式財稅管家。
       </p>
       
-      <div class="flex flex-col sm:flex-row gap-5 justify-center mt-4">
-        <a href="#contact" class="btn-wine" style="letter-spacing:0.2em;">預約專業諮詢</a>
-        <a href="#services" class="btn-outline-gold">瞭解服務項目</a>
+      <!-- 按鈕區塊 -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <a href="#contact" class="btn-wine flex items-center justify-center gap-3 shadow-[0_0_25px_rgba(128,0,32,0.4)] hover:shadow-[0_0_35px_rgba(128,0,32,0.7)] transition-all" style="letter-spacing:0.15em;">
+          <span>預約免費初步諮詢</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+        <a href="https://line.me/R/ti/p/@312desnh" target="_blank" rel="noopener noreferrer" class="btn-outline-gold flex items-center justify-center gap-2">
+          <span>LINE 專人線上解答</span>
+        </a>
       </div>
+
     </div>
+
+    <!-- 右側：高奢擬真數據與優勢卡片 (佔 5 欄，特效疊加) -->
+    <div class="lg:col-span-5 relative reveal">
+      
+      <!-- 外圍香檳金邊框裝飾 -->
+      <div class="absolute -inset-2 bg-gradient-to-r from-[var(--champagne)]/20 via-transparent to-[var(--wine)]/20 rounded-xl blur-sm -z-10"></div>
+
+      <div class="bg-white/5 backdrop-blur-xl border border-white/10 p-8 rounded-lg shadow-2xl relative space-y-6">
+        
+        <!-- 頂部標誌 -->
+        <div class="flex justify-between items-center border-b border-white/10 pb-4">
+          <span class="font-serif text-white/90 text-sm tracking-widest">HUILAI Core Value</span>
+          <span class="text-[var(--champagne)] text-xs tracking-widest uppercase">雙重覆核機制</span>
+        </div>
+
+        <!-- 優勢卡片 1 -->
+        <div class="flex items-start gap-4 p-4 rounded bg-white/5 border border-white/5 hover:border-[var(--champagne)]/40 transition-colors">
+          <div class="w-10 h-10 rounded bg-[var(--wine)]/30 border border-[var(--champagne)]/40 flex items-center justify-center text-[var(--champagne)] flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-white text-base">精準帳務與嚴謹覆核</h3>
+            <p class="font-sans text-white/60 text-xs mt-1 leading-relaxed">實施初審與複審機制，降低人為誤差，確保每一筆財務數據精確透明。</p>
+          </div>
+        </div>
+
+        <!-- 優勢卡片 2 -->
+        <div class="flex items-start gap-4 p-4 rounded bg-white/5 border border-white/5 hover:border-[var(--champagne)]/40 transition-colors">
+          <div class="w-10 h-10 rounded bg-[var(--wine)]/30 border border-[var(--champagne)]/40 flex items-center justify-center text-[var(--champagne)] flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-white text-base">24小時即時專業諮詢</h3>
+            <p class="font-sans text-white/60 text-xs mt-1 leading-relaxed">提供單一窗口對接，快速處理創業輔導與稅務疑義，保障商業時效。</p>
+          </div>
+        </div>
+
+        <!-- 優勢卡片 3 -->
+        <div class="flex items-start gap-4 p-4 rounded bg-white/5 border border-white/5 hover:border-[var(--champagne)]/40 transition-colors">
+          <div class="w-10 h-10 rounded bg-[var(--wine)]/30 border border-[var(--champagne)]/40 flex items-center justify-center text-[var(--champagne)] flex-shrink-0 mt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-serif font-bold text-white text-base">跨領域特約會計師支援</h3>
+            <p class="font-sans text-white/60 text-xs mt-1 leading-relaxed">串聯記帳士與會計師查核簽證資源，免除多方對接成本。</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-3 opacity-60">
-    <span class="font-sans text-white text-[10px] tracking-[0.3em]">SCROLL</span>
-    <!-- 替換為香檳金的漸層線條 -->
-    <div class="w-[1px] h-12 animate-pulse" style="background: linear-gradient(to bottom, var(--champagne, #D4AF37), transparent);"></div>
+  <!-- 底部滾動提示 -->
+  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 opacity-60">
+    <span class="font-sans text-white text-[9px] tracking-[0.3em]">SCROLL</span>
+    <div class="w-[1px] h-8 animate-pulse" style="background: linear-gradient(to bottom, var(--champagne), transparent);"></div>
   </div>
-  
+
 </section>
+
 
 <!-- ═══════════════════════════════════════════════
      PROFESSIONAL PROFILE / ABOUT
@@ -161,12 +234,13 @@ function gtag_report_conversion(url) {
     <!-- Image -->
     <div class="reveal relative">
       <div class="relative overflow-hidden shadow-2xl" style="aspect-ratio: 4/5; max-height: 560px;">
-        <img
-          src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
-          alt="惠徠事務所辦公環境"
-          class="w-full h-full object-cover grayscale"
-          style="filter: grayscale(30%) brightness(0.92);"
-        />
+      <img
+        src="./office.webp"
+        alt="惠徠事務所辦公環境"
+        class="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+        style="object-position: center 80%; filter: grayscale(15%) brightness(0.85) contrast(110%) sepia(10%);"
+       />
+      <div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(180deg, rgba(26,26,26,0.6) 0%, rgba(26,26,26,0.1) 40%, rgba(128,0,32,0.35) 100%);"></div>
         <!-- Wine overlay strip -->
         <div class="absolute bottom-0 left-0 right-0 h-2" style="background: var(--wine);"></div>
       </div>
